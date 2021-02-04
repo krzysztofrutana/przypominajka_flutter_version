@@ -1,6 +1,5 @@
-import 'package:przypominajka_flutter/database/database_provider.dart';
-import 'package:przypominajka_flutter/utils/database_provider_helper.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:przypominajka_flutter/helpers//database_provider_helper.dart';
+
 
 class Event {
   int id;
@@ -55,7 +54,7 @@ class Event {
           : 0,
       DatabaseProviderHelper.EVENT_TIME_MILLIS: eventTimeMillis,
       DatabaseProviderHelper.EVENT_TIME_STRING: eventTimeString
-    }
+    };
 
     if (id != null) {
       map[DatabaseProviderHelper.EVENT_ID] = id;

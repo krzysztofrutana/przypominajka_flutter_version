@@ -1,6 +1,6 @@
-import 'package:przypominajka_flutter/database/models/eventModel.dart';
-import 'package:przypominajka_flutter/database/database_provider.dart';
-import 'package:przypominajka_flutter/utils/database_provider_helper.dart';
+import 'package:przypominajka_flutter/models/eventModel.dart';
+import 'package:przypominajka_flutter/utils/database_provider.dart';
+import 'package:przypominajka_flutter/helpers//database_provider_helper.dart';
 
 class EventDAO {
   final DatabaseProvider _databaseProvider = DatabaseProvider.db;

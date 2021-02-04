@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'package:przypominajka_flutter/utils/database_provider_helper.dart';
+import 'package:przypominajka_flutter/helpers/database_provider_helper.dart';
 
 class DatabaseProvider {
 
@@ -33,6 +33,7 @@ class DatabaseProvider {
   void _createDb(Database db, int newVersion) async {
     Batch batch = db.batch();
     batch.execute(DatabaseProviderHelper.CREATE_EVENT_TABLE_STRING);
+    batch.execute(DatabaseProviderHelper.CREATE_NOTIFICATION_TABLE_STRING);
     List<dynamic> res = await batch.commit();
   }
 

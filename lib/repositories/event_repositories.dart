@@ -1,6 +1,6 @@
-import 'package:przypominajka_flutter/database/dao/event_dao.dart';
-import 'package:przypominajka_flutter/database/dao/event_days_dao.dart';
-import 'package:przypominajka_flutter/database/models/eventModel.dart';
+import 'package:przypominajka_flutter/dao/event_dao.dart';
+import 'package:przypominajka_flutter/dao/event_days_dao.dart';
+import 'package:przypominajka_flutter/models/eventModel.dart';
 
 
 class EventRepositories{
@@ -23,7 +23,7 @@ class EventRepositories{
   Future insertEvent(Event event) async {
     try {
       eventDAO.insertEvent(event);
-      eventDaysDAO.createEventTable(event.eventName)
+      eventDaysDAO.createEventTable(event.eventName);
       if (event.itsMonthIT) {
         eventDaysDAO.fillMonthIntervalTypeEventDetailTable(event);
       } else if (event.itsCustomTimeIT) {

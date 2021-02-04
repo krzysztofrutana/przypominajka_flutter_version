@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:przypominajka_flutter/database//database_provider.dart';
-import 'package:przypominajka_flutter/utils/database_provider_helper.dart';
-import 'package:przypominajka_flutter/database/models/eventModel.dart';
+import 'package:przypominajka_flutter/utils//database_provider.dart';
+import 'package:przypominajka_flutter/helpers//database_provider_helper.dart';
+import 'package:przypominajka_flutter/helpers/datetime_helper.dart';
+import 'package:przypominajka_flutter/models/eventModel.dart';
 
 class EventDaysDAO {
   final DatabaseProvider _databaseProvider = DatabaseProvider.db;
@@ -84,8 +85,6 @@ class EventDaysDAO {
     }
   }
 
-  double toDouble(TimeOfDay myTime) => myTime.hour + myTime.minute / 60.0;
-
   Future fillCustomTimeIntervalTypeEventTable(Event event) async {
     try {
       DateTime dateToInsert;
@@ -94,7 +93,7 @@ class EventDaysDAO {
         TimeOfDay timeOfEvent =
             TimeOfDay.fromDateTime(DateTime.parse(event.eventTimeString));
         TimeOfDay nowTime = TimeOfDay.now();
-        if (toDouble(timeOfEvent) > toDouble(nowTime)) {
+        if (DateTimeHelper.getTimeInDouble(timeOfEvent) > DateTimeHelper.getTimeInDouble(nowTime)) {
           dateToInsert = startDate;
         } else {
           dateToInsert =
