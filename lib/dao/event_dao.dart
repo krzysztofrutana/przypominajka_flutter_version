@@ -30,8 +30,11 @@ class EventDAO {
             columns: DatabaseProviderHelper.EVENT_TABLE_COLUMN,
             where: '${DatabaseProviderHelper.EVENT_NAME} LIKE ?',
             whereArgs: [name]);
-      Event event = Event.fromMap(result.first);
-      return event;
+      if(result.isNotEmpty){
+        return Event.fromMap(result.first);
+      }else{
+        return null;
+      }
     } else {
       return null;
     }
@@ -47,8 +50,11 @@ class EventDAO {
             columns: DatabaseProviderHelper.EVENT_TABLE_COLUMN,
             where: '${DatabaseProviderHelper.EVENT_NAME} LIKE ?',
             whereArgs: [name]);
-      Event event = Event.fromMap(result.first);
-      return event.id;
+      if(result.isNotEmpty){
+        return Event.fromMap(result.first).id;
+      }else{
+        return null;
+      }
     } else {
       return -1;
     }

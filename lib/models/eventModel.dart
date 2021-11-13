@@ -64,29 +64,29 @@ class Event {
   }
 
   Event.fromMap(Map<String, dynamic> map){
-    id = map[DatabaseProviderHelper.EVENT_ID];
-    eventName = map[DatabaseProviderHelper.EVENT_NAME];
-    eventDiscription = map[DatabaseProviderHelper.EVENT_DISCRIPTION];
-    eventColorNumber = map[DatabaseProviderHelper.EVENT_COLOR_NUMBER];
-    itsMonthIT = map[DatabaseProviderHelper.ITS_MONTH_IT] == 1;
-    monthITQuantityOfRepeats =
-    map[DatabaseProviderHelper.MONTH_IT_QUANTITY_OF_REPEATS];
-    monthITDayOfMonth = map[DatabaseProviderHelper.MONTH_IT_DAY_OF_MONTH];
-    itsCustomTimeIT = map[DatabaseProviderHelper.ITS_CUSTOM_TI] == 1;
-    customTimeITType = map[DatabaseProviderHelper.CUSTOM_TIME_IT_TYPE];
-    customTimeITRepeatsAllTime =
-    map[DatabaseProviderHelper.CUSTOM_TIME_IT_REPEATS_ALL_TIME];
-    customTimeITQuantityOfRepeats =
-    map[DatabaseProviderHelper.CUSTOM_TIME_IT_QUANTITY_OF_REPEATS];
-    customTimeITTimeInterval =
-    map[DatabaseProviderHelper.CUSTOM_TIME_IT_TIME_INTERVAL];
-    itsOneTimeType = map[DatabaseProviderHelper.ITS_ONE_TIME_TYPE] == 1;
-    oneTimeTypeDate = map[DatabaseProviderHelper.ONE_TIME_TYPE_DATE];
-    startDateMillis = map[DatabaseProviderHelper.START_DATE_MILLIS];
-    startDateString = map[DatabaseProviderHelper.START_DATE_STRING];
-    itsEventDefaultTime =
-        map[DatabaseProviderHelper.ITS_EVENT_DEFAULT_TIME] == 1;
-    eventTimeMillis = map[DatabaseProviderHelper.EVENT_TIME_MILLIS];
-    eventTimeString = map[DatabaseProviderHelper.EVENT_TIME_STRING];
+      id = map[DatabaseProviderHelper.EVENT_ID];
+      eventName = map[DatabaseProviderHelper.EVENT_NAME];
+      eventDiscription = map[DatabaseProviderHelper.EVENT_DISCRIPTION];
+      eventColorNumber = map[DatabaseProviderHelper.EVENT_COLOR_NUMBER];
+      itsMonthIT = map[DatabaseProviderHelper.ITS_MONTH_IT] == 1;
+      monthITQuantityOfRepeats =
+      map[DatabaseProviderHelper.MONTH_IT_QUANTITY_OF_REPEATS];
+      monthITDayOfMonth = map[DatabaseProviderHelper.MONTH_IT_DAY_OF_MONTH];
+      itsCustomTimeIT = map[DatabaseProviderHelper.ITS_CUSTOM_TI] == 1;
+      customTimeITType = map[DatabaseProviderHelper.CUSTOM_TIME_IT_TYPE];
+      customTimeITRepeatsAllTime =
+      map[DatabaseProviderHelper.CUSTOM_TIME_IT_REPEATS_ALL_TIME];
+      customTimeITQuantityOfRepeats =
+      map[DatabaseProviderHelper.CUSTOM_TIME_IT_QUANTITY_OF_REPEATS];
+      customTimeITTimeInterval =
+      map[DatabaseProviderHelper.CUSTOM_TIME_IT_TIME_INTERVAL];
+      itsOneTimeType = map[DatabaseProviderHelper.ITS_ONE_TIME_TYPE] == 1;
+      oneTimeTypeDate = map[DatabaseProviderHelper.ONE_TIME_TYPE_DATE];
+      startDateMillis = map[DatabaseProviderHelper.START_DATE_MILLIS];
+      startDateString = map[DatabaseProviderHelper.START_DATE_STRING];
+      itsEventDefaultTime =
+          map[DatabaseProviderHelper.ITS_EVENT_DEFAULT_TIME] == 1;
+      eventTimeMillis = map[DatabaseProviderHelper.EVENT_TIME_MILLIS];
+      eventTimeString = map[DatabaseProviderHelper.EVENT_TIME_STRING];
   }
 }

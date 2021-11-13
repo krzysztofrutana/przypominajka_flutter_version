@@ -23,7 +23,6 @@ class DrawerBloc extends Bloc<DrawerEvent, DrawerState> {
       DrawerEvent event,
   ) async* {
     if (event is NavigateTo) {
-      // only route to a new location if the new location is different
       switch(event.destination){
         case NavigationItem.home:
           yield DrawerState(event.destination);
